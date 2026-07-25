@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survival Registration Form</title>
+</head>
+
+<body>
+
+    <form action="index.htm" target="_blank" autocomplete="on" method="post">
+        <label>Full Name:</label>
+        <input type="text" name="fullname"
+            placeholder="The name you'll blame after exam results">
+        <br><br>
+        <label>Phone Number:</label>
+        <input type="tel" name="phone"
+            placeholder="01XXXXXXXXX">
+
+        <br><br>
+        <label>Email:</label>
+        <input type="email" name="email"
+            placeholder="(No fake email... we know 😏):" required>
+        <br><br>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <br><br>
+        <label>Current Mood:</label>
+        <input type="radio" name="mood" value="alive"> Surviving
+        <input type="radio" name="mood" value="dead"> Dead Inside
+        <br><br>
+        <label>Tick all that apply:</label>
+        <input type="checkbox" name="habit1"> I study one night before <b>exam</b>
+        <input type="checkbox" name="habit2"> I say "I'll start <i>tomorrow</i>."
+        <input type="checkbox" name="habit3"> I survive on <u>tea</u> /coffee.
+        <input type="checkbox" name="habit4"> Waiting for semester break.
+        <br><br>
+        <label>Favorite Place:</label>
+        <select name="place">
+            <option>Home</option>
+            <option>College Canteen</option>
+            <option>Gaming Setup</option>
+            <option>Anywhere with Free Wi-Fi</option>
+            <option>Under Lap in rainy season</option>
+        </select>
+        <br><br>
+        <textarea name="excuse"
+            placeholder="Write your best excuse for being late to class..."></textarea>
+        <br><br>
+
+        <button type="submit">Submit & Hope for the Best</button>
+
+    </form>
+
+</body>
+
+</html>
