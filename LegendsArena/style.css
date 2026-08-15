@@ -1,0 +1,609 @@
+/* =========================================
+   LEGENDS ARENA 2026
+   PREMIUM ESPORTS DESIGN
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+section {
+    scroll-margin-top: 80px;
+}
+
+body {
+    margin: 0;
+    background: #0b0b0d;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    background: #0b0b0d;
+    padding: 45px 20px 35px;
+    text-align: center;
+    border-bottom: 1px solid #252529;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+header h3 {
+    margin: 8px 0 0;
+    color: #99999f;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    background: rgba(11, 11, 13, 0.96);
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid #252529;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #d7d7db;
+    text-decoration: none;
+
+    margin: 0 22px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: 0.25s;
+}
+
+nav a:hover {
+    color: #e63946;
+}
+
+
+/* =========================================
+   REMOVE OLD HR LOOK
+========================================= */
+
+hr {
+    display: none;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+section:first-of-type {
+    max-width: none;
+    min-height: 650px;
+
+    margin: 0;
+
+    padding: 70px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.85)
+        );
+
+    position: relative;
+}
+
+section:first-of-type h2 {
+    font-size: 62px;
+
+    margin: 0 0 25px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: -2px;
+}
+
+section:first-of-type img {
+    width: min(1100px, 90%);
+
+    max-height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+
+    border: 1px solid #333;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+section:first-of-type p {
+    max-width: 700px;
+
+    margin: 25px auto 15px;
+
+    color: #b5b5ba;
+
+    font-size: 17px;
+}
+
+section:first-of-type a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 14px 28px;
+
+    background: #e63946;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    border-radius: 2px;
+
+    transition: 0.25s;
+}
+
+section:first-of-type a:hover {
+    background: #ff4b58;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+section:not(:first-of-type) {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 90px 30px;
+}
+
+section h2 {
+    margin-bottom: 40px;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: -0.5px;
+}
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+
+    height: 3px;
+
+    background: #e63946;
+
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   FEATURED GAMES
+========================================= */
+
+#games ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1px;
+
+    background: #29292e;
+
+    border: 1px solid #29292e;
+}
+
+#games li {
+    background: #111114;
+
+    padding: 30px 25px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: #eeeeef;
+
+    transition: 0.25s;
+}
+
+#games li:hover {
+    background: #18181c;
+
+    color: #e63946;
+}
+
+
+/* =========================================
+   TOURNAMENT TABLE
+========================================= */
+
+#Schedule {
+    overflow-x: auto;
+}
+
+#Schedule table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: #111114;
+
+    border: 1px solid #29292e;
+}
+
+#Schedule th {
+    background: #19191d;
+
+    color: #ffffff;
+
+    padding: 18px;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+#Schedule td {
+    padding: 18px;
+
+    border-top: 1px solid #29292e;
+
+    color: #bdbdc2;
+
+    font-size: 15px;
+}
+
+#Schedule tr:hover td {
+    background: #17171a;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   PRIZE POOL
+========================================= */
+
+#Prize ol {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+#Prize li {
+    background: #111114;
+
+    border: 1px solid #29292e;
+
+    padding: 30px;
+
+    min-height: 130px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+
+    transition: 0.25s;
+}
+
+#Prize li:first-child {
+    border-top: 3px solid #d4af37;
+}
+
+#Prize li:nth-child(2) {
+    border-top: 3px solid #aaa;
+}
+
+#Prize li:nth-child(3) {
+    border-top: 3px solid #555;
+}
+
+#Prize li:hover {
+    transform: translateY(-5px);
+
+    border-color: #555;
+}
+
+#Prize p {
+    color: #77777d;
+
+    font-size: 13px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   VIDEO
+========================================= */
+
+section video {
+    width: 100%;
+
+    max-width: 900px;
+
+    display: block;
+
+    margin: auto;
+
+    border: 1px solid #29292e;
+
+    background: #000;
+}
+
+
+/* =========================================
+   REGISTRATION
+========================================= */
+
+#Register form {
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    background: #111114;
+
+    border: 1px solid #29292e;
+}
+
+#Register form input[type="text"],
+#Register form input[type="email"],
+#Register form select,
+#Register form textarea {
+    width: 100%;
+
+    margin: 8px 0 20px;
+
+    padding: 14px;
+
+    background: #0b0b0d;
+
+    color: #ffffff;
+
+    border: 1px solid #333338;
+
+    border-radius: 2px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+#Register form input[type="text"]:focus,
+#Register form input[type="email"]:focus,
+#Register form select:focus,
+#Register form textarea:focus {
+    border-color: #e63946;
+}
+
+#Register form textarea {
+    resize: vertical;
+}
+
+#Register form input[type="submit"] {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    background: #e63946;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 2px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+#Register form input[type="submit"]:hover {
+    background: #ff4b58;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+section:nth-last-of-type(1) {
+    text-align: center;
+}
+
+section img {
+    transition: 0.3s;
+}
+
+section img[width="200"] {
+    width: 210px;
+
+    height: 145px;
+
+    object-fit: cover;
+
+    margin: 5px;
+
+    border: 1px solid #29292e;
+}
+
+section img[width="200"]:hover {
+    transform: scale(1.03);
+
+    border-color: #e63946;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #070708;
+
+    border-top: 1px solid #29292e;
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 20px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+footer a {
+    color: #99999f;
+
+    text-decoration: none;
+
+    margin: 0 15px;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+footer a:hover {
+    color: #e63946;
+}
+
+footer p {
+    color: #66666c;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav a {
+        margin: 5px 8px;
+
+        display: inline-block;
+    }
+
+    section:first-of-type {
+        min-height: 500px;
+    }
+
+    section:first-of-type h2 {
+        font-size: 40px;
+    }
+
+    #games ul {
+        grid-template-columns: 1fr;
+    }
+
+    #Prize ol {
+        grid-template-columns: 1fr;
+    }
+
+    section img[width="200"] {
+        width: 45%;
+
+        height: 120px;
+    }
+
+    #Register form {
+        padding: 25px;
+    }
+}
