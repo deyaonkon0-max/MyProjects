@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2 Practical Tasks</title>
+    <style>
+        /*Element Selector*/
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f8;
+            color: #222;
+        }
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+        /*Class Selector*/
+        .section {
+            background-color: white;
+            margin: 25px auto;
+            padding: 25px;
+            width: 85%;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            background-color: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /*ID Selector*/
+        #header {
+            background-color: #172554;
+            padding: 25px;
+        }
+        #profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        /*Descendant Selector*/
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+        /*Child Selector*/
+        nav > a:hover {
+            color: #60a5fa;
+        }
+        nav {
+            text-align: center;
+            background-color: #2563eb;
+            padding: 15px;
+        }
+        form label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        form input,
+        form select,
+        form textarea {
+            width: 95%;
+            padding: 9px;
+            margin-top: 5px;
+        }
+        form input[type="radio"],
+        form input[type="checkbox"] {
+            width: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th,
+        td {
+            border: 1px solid #999;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #2563eb;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f1f5f9;
+        }
+        img {
+            display: block;
+            margin: 15px auto;
+        }
+        .media {
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            background-color: #172554;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- --------------- HEADER ------------->
+    <header id="header">
+        <h1>My Student Profile</h1>
+    </header>
+    <!-- .................. NAVIGATION ............. -->
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#registration">Registration</a>
+        <a href="#result">Result</a>
+        <a href="#media">Media</a>
+    </nav>
+    <main>
+        <section class="section" id="profile">
+            <h2>1. Personal Profile</h2>
+            <img id="profile-picture"
+                 src="me.jpeg"
+                 alt="Student Profile Picture">
+            <article>
+                <h3>About Me</h3>
+                <p>
+                    Hello! My name is Aonkon. I am a university student
+                    interested in programming, web development and technology.
+                </p>
+            </article>
+            <section>
+                <h3>Education</h3>
+                <ul>
+                    <li>University Student</li>
+                    <li>Department of Computer Science</li>
+                    <li>Interested in Web Development</li>
+                </ul>
+            </section>
+            <aside>
+                <h3>My Hobbies</h3>
+                <ol>
+                    <li>Gaming</li>
+                    <li>Programming</li>
+                    <li>Watching Movies</li>
+                    <li>Listening to Music</li>
+                </ol>
+            </aside>
+
+        </section>
+        <section class="section" id="registration">
+            <h2>2. University Course Registration Form</h2>
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your full name"
+                       required>
+                <label for="email">University Email:</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="example@email.com"
+                       required>
+                <label for="student-id">Student ID:</label>
+                <input type="number"
+                       id="student-id"
+                       name="student-id"
+                       min="1"
+                       required>
+                <label for="dob">Date of Birth:</label>
+                <input type="date"
+                       id="dob"
+                       name="dob"
+                       required>
+                <label>Gender:</label>
+                <input type="radio"
+                       name="gender"
+                       value="male"
+                       required>
+                Male
+                <input type="radio"
+                       name="gender"
+                       value="female">
+                Female
+                <label for="department">Department:</label>
+                <select id="department"
+                        name="department"
+                        required>
+                    <option value="">Select Department</option>
+                    <option value="cse">Computer Science</option>
+                    <option value="eee">Electrical Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="me">Mechanical Engineering</option>
+                </select>
+                <label>Courses:</label>
+                <input type="checkbox"
+                       name="course"
+                       value="internet">
+                Internet Programming
+                <input type="checkbox"
+                       name="course"
+                       value="oop">
+                Object Oriented Programming
+                <input type="checkbox"
+                       name="course"
+                       value="nm">
+                Numerical Method
+                <label for="semester">Semester:</label>
+                <select id="semester"
+                        name="semester"
+                        required>
+                    <option value="">Select Semester</option>
+                    <option value="1">1st Semester</option>
+                    <option value="2">2nd Semester</option>
+                    <option value="3">3rd Semester</option>
+                    <option value="4">4th Semester</option>
+                    <option value="5">5th Semester</option>
+                    <option value="6">6th Semester</option>
+                    <option value="7">7th Semester</option>
+                    <option value="8">8th Semester</option>
+                </select>
+                <label for="comments">Comments:</label>
+                <textarea id="comments"
+                          name="comments"
+                          rows="4"
+                          placeholder="Write something..."></textarea>
+
+                <br><br>
+                <button class="button" type="submit">
+                    Register
+                </button>
+                <button class="button" type="reset">
+                    Reset
+                </button>
+            </form>
+        </section>
+        
+        <section class="section" id="result">
+            <h2>3. Student Result Table</h2>
+            <table>
+                <caption>
+                    <strong>Semester Result</strong>
+                </caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Sadman</td>
+                        <td>Internet Programming</td>
+                        <td>90</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Nafis</td>
+                        <td>Internet Programming</td>
+                        <td>82</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Mehraj</td>
+                        <td>Internet Programming</td>
+                        <td>76</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>104</td>
+                        <td>Aonkon</td>
+                        <td>Internet Programming</td>
+                        <td>68</td>
+                        <td>A-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section class="section" id="media">
+            <h2>4. Images, Hyperlinks, Lists, Audio and Video</h2>
+            <h3>Image</h3>
+            <img src="hawkar.jpeg"
+                 alt="Sample Image"
+                 width="500">
+
+
+            <h3>Hyperlinks</h3>
+            <p>
+                Visit:
+                <a href="https://www.google.com"
+                   target="_blank">
+                    Google
+                </a>
+            </p>
+            <p>
+                Visit:
+                <a href="https://www.wikipedia.org"
+                   target="_blank">
+                    Wikipedia
+                </a>
+            </p>
+            <h3>Unordered List</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>C++</li>
+            </ul>
+            <h3>Ordered List</h3>
+            <ol>
+                <li>Learn HTML</li>
+                <li>Learn CSS</li>
+                <li>Practice</li>
+                <li>Build Projects</li>
+            </ol>
+            <div class="media">
+                <h3>Audio</h3>
+                <audio controls>
+                    <source src="water.mp3" type="audio/mpeg">
+                    Your browser does not support audio.
+                </audio>
+                <h3>Video</h3>
+                <video width="500" controls>
+                    <source src="final_2.mp4"
+                            type="video/mp4">
+
+                    Your browser does not support video.
+                </video>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>5. CSS Selector Demonstration</h2>
+            <p>
+                This webpage demonstrates five types of CSS selectors:
+            </p>
+            <ul>
+                <li><strong>Element Selector:</strong> body, h1, table</li>
+                <li><strong>Class Selector:</strong> .section, .button</li>
+                <li><strong>ID Selector:</strong> #header, #profile</li>
+                <li><strong>Descendant Selector:</strong> nav a</li>
+                <li><strong>Child Selector:</strong> nav &gt; a</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+       <p>
+             My Student Profile | Dont book a cover by its judge
+        </p>
+    </footer>
+</body>
+</html>
+```
