@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Profile Cards</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+        }
+        h1 {
+            text-align: center;
+            margin: 30px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #2563eb;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .profile img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .info h2 {
+            margin: 0;
+        }
+        .info p {
+            margin-top: 5px;
+            color: #64748b;
+        }
+
+        .button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #4f46e5;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Profile Cards</h1>
+    <!-- GRID CONTAINER -->
+    <div class="card-container">
+        <!-- CARD 1 -->
+        <div class="card">
+            <span class="badge">
+                NEW
+            </span>
+            <div class="profile">
+                <img src="Aonkon.jpeg"
+                     alt="Profile">
+                <div class="info">
+                    <h2>Aonkon Dey</h2>
+                    <p>Bot Developer</p>
+                </div>
+            </div>
+            <p>
+                Interested in pro-gamming,Hawking,
+                web blastment and technology.
+            </p>
+            <button class="button">
+                View Profile
+            </button>
+        </div>
+        <!-- CARD 2 -->
+
+        <div class="card">
+
+            <span class="badge">
+                ONLINE
+            </span>
+            <div class="profile">
+                <img src="Sadman.jpeg"
+                     alt="Profile">
+                <div class="info">
+                    <h2>Mehraj Hossen</h2>
+                    <p>Sick Developer</p>
+                </div>
+            </div>
+            <p>
+                Not Interested in Any type of programming.
+            </p>
+            <button class="button">
+                View Profile
+            </button>
+        </div>
+        <!-- CARD 3 -->
+        <div class="card">
+            <span class="badge">
+                NEW
+            </span>
+            <div class="profile">
+                <img src="Mehraj.jpeg"
+                     alt="Profile">
+                <div class="info">
+                    <h2>Mehraj</h2>
+                    <p>Red Eye</p>
+                </div>
+            </div>
+            <p>
+                Not Interested in software engineering,
+                I just wanna sleep.
+            </p>
+            <button class="button">
+                View Profile
+            </button>
+        </div>
+    </div>
+</body>
+</html>
+
